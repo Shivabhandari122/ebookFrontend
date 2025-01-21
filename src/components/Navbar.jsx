@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <>
       <header className='flex bg-white border-b py-3 sm:px-6 px-4 font-[sans-serif] min-h-[75px] tracking-wide relative z-50'>
       <div className='flex max-w-screen-xl mx-auto w-full'>
         <div className='flex flex-wrap items-center lg:gap-y-2 gap-4 w-full'>
-          <a href="javascript:void(0)" className="max-sm:hidden"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' />
+
+          {/*logo for website <a href="javascript:void(0)" className="max-sm:hidden"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" className='w-36' />
           </a>
           <a href="javascript:void(0)" className="hidden max-sm:block"><img src="https://readymadeui.com/readymadeui-short.svg" alt="logo" className='w-9' />
-          </a>
+          </a> */}
 
           <div id="collapseMenu"
             className='lg:ml-6 max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50'>
@@ -33,8 +36,8 @@ function Navbar() {
                     In</button>
                 </div>
               </li>
-              <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
-                className='text-[#007bff] hover:text-[#007bff] text-[15px] block font-semibold'>Home</a></li>
+              <li className='max-lg:border-b max-lg:py-3 px-3'><Link to="/"
+                className='text-[#007bff] hover:text-[#007bff] text-[15px] block font-semibold'>Home</Link></li>
               <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
                 className='text-[#333] hover:text-[#007bff] text-[15px] block font-semibold'>Featured</a></li>
               <li className='max-lg:border-b max-lg:py-3 px-3'><a href='javascript:void(0)'
