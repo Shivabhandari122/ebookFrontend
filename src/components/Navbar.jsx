@@ -1,6 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Signin from "../pages/Signin";
 
 function Navbar() {
+  const navigate = useNavigate();
+  const handleSignin = () => {
+    console.log("Redirecting to /Signin");
+    navigate("/Signin");
+  };
   return (
     <>
       <header className="flex bg-white border-b py-3 sm:px-6 px-4 font-[sans-serif] min-h-[75px] tracking-wide relative z-50">
@@ -146,7 +152,10 @@ function Navbar() {
                   </span>
                 </div>
 
-                <button className="max-lg:hidden px-4 py-2 text-sm rounded-full text-white border-2 border-[#007bff] bg-[#007bff] hover:bg-[#004bff]">
+                <button
+                  onClick={handleSignin}
+                  className="max-lg:hidden px-4 py-2 text-sm rounded-full text-white border-2 border-[#007bff] bg-[#007bff] hover:bg-[#004bff]"
+                >
                   Sign In
                 </button>
 
