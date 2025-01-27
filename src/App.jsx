@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import SingleCard from "./pages/SingleCard";
 import CreateBook from "./pages/CreateBook";
 import Signin from "./pages/Signin";
+import EditBook from "./pages/EditBook";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/books/:id" element={<SingleCard />} />
           <Route path="/create" element={<CreateBook />} />
           <Route path="/Signin" element={<Signin />} />
+          <Route path="/edit/:id" element={<EditBook />} />
         </Routes>
       </BrowserRouter>
     </>
